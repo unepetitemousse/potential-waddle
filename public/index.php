@@ -25,7 +25,8 @@
 <section class="quotations">
   <?php foreach($db->query('select * from USER') as $row): ?>
   <blockquote>
-    <span class="user">-- <?php echo $row['name']; ?></span>
+    <span class="author"><?php echo $row['name']; ?></span>
+    <?php echo $row['message']; ?>
   </blockquote>
   <?php endforeach; ?>
 </section>

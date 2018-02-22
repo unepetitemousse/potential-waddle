@@ -22,8 +22,8 @@
 <script>
     $.formUtils.addValidator({
         name: 'zedisbad',
-        validatorFunction: function (val, $el) {
-            return !val.toLowerCase().includes("z");
+        validatorFunction: function (quackVal) {
+            return !quackVal.toLowerCase().includes("z");
         },
         errorMessage: 'Z is bad',
         errorMessageKey: ''

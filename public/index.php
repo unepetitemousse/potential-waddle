@@ -16,10 +16,18 @@
 </section>
 
 <section>
-  <form actions="post.php" method="POST">
+  <form action="post.php" method="POST">
     <input type="text" name="user_name" value="" data-validation="required zedisbad"/>
     <button type="submit">Soumettre</button>
   </form>
+</section>
+
+<section class="quotations">
+  <?php foreach($db->query('select * from USER') as $row): ?>
+  <blockquote>
+    <span class="user">-- <?php echo $row['name']; ?></span>
+  </blockquote>
+  <?php endforeach; ?>
 </section>
 
 <script>

@@ -1,6 +1,7 @@
 <html>
 <head>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 </head>
 <body>
 <h1>Hello World !</h1>
@@ -10,5 +11,27 @@
 
   <p>Current time is <?php echo date('c', time()); ?></p>
 </section>
+
+<section>
+  <form actions="" method="POST">
+    <input type="text" name="user_name" value="" data-validation="required zedisbad"/>
+    <button type="submit">Soumettre</button>
+  </form>
+</section>
+
+<script>
+    $.formUtils.addValidator({
+        name: 'zedisbad',
+        validatorFunction: function (val, $el) {
+            return !val.toLowerCase().includes("z");
+        },
+        errorMessage: 'Z is bad',
+        errorMessageKey: ''
+    });
+
+    $.validate({
+        lang: 'en'
+    });
+</script>
 </body>
 </html>

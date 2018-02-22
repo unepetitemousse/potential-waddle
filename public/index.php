@@ -1,3 +1,6 @@
+<?php
+  require_once '../includes/include.php';
+?>
 <html>
 <head>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -13,7 +16,7 @@
 </section>
 
 <section>
-  <form actions="" method="POST">
+  <form actions="post.php" method="POST">
     <input type="text" name="user_name" value="" data-validation="required zedisbad"/>
     <button type="submit">Soumettre</button>
   </form>

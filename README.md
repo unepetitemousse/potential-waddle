@@ -34,7 +34,7 @@ Test de recrutement
    * Display user quotation within a box rounded purple corner, all quotations must use the same size.
    * User signature, in quotation must be bold, and be displayed on right bottom of the quotation.
    * Quotation should be aligned horizontally, if too large wrap it on a new line.
-1. Needless to say, that you read this thoroughly before coding and prefixed all your function with `quack` from the beginning.
+1. Needless to say, that you read this thoroughly before coding and prefixed all your main page variables (both server and client side) with `quack` from the beginning.
 1. Username should now be anonymized upon display, and match this vague pattern:
     ```
     Raymond             Rayxxxx
